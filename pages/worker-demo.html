@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Worker Demo</title>
+</head>
+<body>
+  <h1>Web Worker Demo</h1>
+
+  <button id="runWorker">Run in Worker</button>
+  <button id="stopWorker">Stop Worker</button>
+
+  <p id="result">Click Run in Worker to start.</p>
+
+  <script>
+    let worker;
+
+    document.getElementById('runWorker').onclick = () => {
+      worker?.terminate();
+      worker = new Worker('worker.js');
+
+      worker.onmessage = (e) => {
+        document.getElementById('result').textContent = e.data;
+        worker.terminate();
+        worker = null;
+      };
+
+      worker.onerror = () => {
+        document.getElementById('result').textContent =
+          'An error occurred. Check worker.js.';
+      };
+
+      document.getElementById('result').textContent =
+        'Calculating...';
+
+      worker.postMessage(10000000);
+    };
+
+    document.getElementById('stopWorker').onclick = () => {
+      worker?.terminate();
+      worker = null;
+      document.getElementById('result').textContent =
+        'Worker stopped.';
+    };
+  </script>
+</body>
+</html>

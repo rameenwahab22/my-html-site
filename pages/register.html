@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+
+  <nav>
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link register-link" href="register.html">Register</a>
+  </nav>
+
+  <main>
+    <h2>Registration Coming Soon</h2>
+    <p>This page will contain a registration form in a future task.</p>
+    <form action="#" method="post">
+
+<label>Full name:
+  <input type="text" name="fullname"
+         required minlength="2"
+         pattern="[A-Za-z\s]+">
+</label><br><br>
+
+<label>Email:
+  <input type="email" name="email" required>
+</label><br><br>
+
+<label>Password:
+  <input type="password" name="password"
+         required minlength="8">
+</label><br><br>
+
+<label>
+  <input type="checkbox" name="terms" required>
+  I agree to the terms
+</label><br><br>
+  <label>Age: <input type="number" name="age" min="16" max="99"></label><br><br>
+  <label>Start date: <input type="date" name="startdate"></label><br><br>
+  <label>Course:
+    <select name="course">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+    </select>
+  </label><br><br>
+  <label><input type="radio" name="plan" value="full"> Full-time</label>
+  <label><input type="radio" name="plan" value="part"> Part-time</label><br><br>
+  <label><input type="checkbox" name="terms"> I agree to the terms</label><br><br>
+  <label>Comments: <textarea name="comments" rows="3"></textarea></label><br><br>
+  <button type="submit">Register</button>
+</form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Website</p>
+  </footer>
+</body>
+</html>

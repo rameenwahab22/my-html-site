@@ -1,0 +1,2 @@
+
+console.log('PM-04 bundle ready');

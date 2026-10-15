@@ -1,0 +1,20 @@
+:root {
+  --bs-primary: #7c3aed;
+  --bs-primary-rgb: 124, 58, 237;
+}
+
+.btn-primary {
+  background-color: #7c3aed !important;
+  border-color: #7c3aed !important;
+  border-radius: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #6d28d9 !important;
+  border-color: #6d28d9 !important;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

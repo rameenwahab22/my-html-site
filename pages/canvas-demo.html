@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Demo</title>
+</head>
+<body>
+    <canvas id="artCanvas" width="400" height="200" style="border:1px solid #64748b;"></canvas>
+    <script>
+      const canvas = document.getElementById('artCanvas');
+      const ctx = canvas.getContext('2d'); // 2D drawing context
+
+      // Background rectangle
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(0, 0, 400, 200);
+
+      // Filled circle (arc: x, y, radius, startAngle, endAngle)
+      ctx.beginPath();
+      ctx.arc(100, 100, 50, 0, Math.PI * 2);
+      ctx.fillStyle = '#f59e0b';
+      ctx.fill();
+
+      // Stroked rectangle
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 4;
+      ctx.strokeRect(200, 50, 150, 100);
+
+      // Text label drawn programmatically
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '16px sans-serif';
+      ctx.fillText('Canvas API', 215, 105);
+    </script>
+</body>
+</html>
